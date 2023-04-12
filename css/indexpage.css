@@ -1,0 +1,28 @@
+td{
+    background-color: gray;
+    padding: 10px;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+}
+table
+{
+    padding-left: 700px;
+    padding-top: 330px;
+}
+body
+{
+background-image: url("../images/skog.jpg");
+background-size: cover;
+}
+button
+{
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: whitesmoke;
+    border: none;
+    
+}
