@@ -18,12 +18,37 @@ getButtonsNorth();
 getButtonsSouth();
 displayLife();
 displaySavedCats();
+getImagefield();
+
+function getImagefield()
+{
+    let catpic=""
+    catpic="../images/natur.jpg"
+    document.getElementById("catimg").src=catpic
+    
+}
+
+function getImagefieldCat()
+{
+    let catpic=""
+    catpic="../images/cat.jpg"
+    document.getElementById("catimg").src=catpic
+    
+}
+function getImagefieldZombie()
+{
+    let catpic=""
+    catpic="../images/zombie.png"
+    document.getElementById("catimg").src=catpic
+    
+}
 
 function collisionCats()
 {
     if(matrix[y][x]=='Cat')
     {
         savedCats++;
+        getImagefieldCat()
     }
 }
 function collisionZombie()
@@ -31,9 +56,11 @@ function collisionZombie()
     if(matrix[y][x]=='Zombie')
     {
         life--;
+        getImagefieldZombie();
     }
 }
 function drawTable() {
+    getImagefield();
     let table = "";
     table += "<table>"
     let arrayLength = arr.length;
@@ -236,6 +263,5 @@ function zombieMovment ()
         }  
     }   
 }
-
 
 
