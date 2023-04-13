@@ -26,3 +26,14 @@ button
     border: none;
     
 }
+.healthclass
+{
+    font-size: 30px;
+    padding-left: 590px;
+    
+}
+.catclass
+{
+    font-size: 30px;
+    padding-left: 120px;
+}
