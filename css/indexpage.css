@@ -49,3 +49,40 @@ button
     font-size: 20px;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
+.north
+{
+    padding-left: 850px;
+    padding-top: 0px;
+}
+.south
+{
+    padding-left: 850px;
+    padding-top: 0px;
+}
+.east
+{
+    padding-left: 600px;
+}
+.west
+{
+    padding-left: 1080px;
+}
+li
+{
+    display: inline-block;
+}
+a
+{
+    text-decoration: none;
+    padding-left: 50px;
+    color: black;
+    font-size: 30px;
+    
+}
+.low
+{
+    padding-top: 10px;
+
+}
+
+

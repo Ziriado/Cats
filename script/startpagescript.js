@@ -6,9 +6,9 @@ let y = 4;
 let drawcount = 0;
 let life = 1;
 let savedCats = 0;
-let zombieX=3;
-let zombieY=3;
-let drawXvalue=0;
+let zombieX = 3;
+let zombieY = 3;
+let drawXvalue = 0;
 const arr = ["O", "O", "Cat", "O", "Cat", "O", "O"];
 
 drawTable();
@@ -20,48 +20,44 @@ displayLife();
 displaySavedCats();
 getImagefield();
 
-function getImagefield()
-{
-    let catpic=""
-    catpic="../images/natur.jpg"
-    document.getElementById("catimg").src=catpic
-    document.getElementById("imgline").innerHTML="Du är vid vattenfallet på ruta: "+y+","+x
+function getImagefield() {
+    let catpic = ""
+    catpic = "../images/natur.jpg"
+    document.getElementById("catimg").src = catpic
+    document.getElementById("imgline").innerHTML = "Du är vid vattenfallet på ruta: " + y + "," + x
 }
 
-function getImagefieldCat()
-{
-    let catpic=""
-    catpic="../images/cat.jpg"
-    document.getElementById("catimg").src=catpic
-    document.getElementById("imgline").innerHTML="Du träffade på en katt vid ruta: "+y+","+x
-    
+function getImagefieldCat() {
+    let catpic = ""
+    catpic = "../images/cat.jpg"
+    document.getElementById("catimg").src = catpic
+    document.getElementById("imgline").innerHTML = "Du träffade på en katt vid ruta: " + y + "," + x
+
 }
-function getImagefieldZombie()
-{
-    let catpic=""
-    catpic="../images/zombie.png"
-    document.getElementById("catimg").src=catpic
-    document.getElementById("imgline").innerHTML="Aj då zombin fångade dig vid ruta: "+y+","+x
-    
+function getImagefieldZombie() {
+    let catpic = ""
+    catpic = "../images/zombie.png"
+    document.getElementById("catimg").src = catpic
+    document.getElementById("imgline").innerHTML = "Aj då zombin fångade dig vid ruta: " + y + "," + x
+
 }
 
-function collisionCats()
-{
-    if(matrix[y][x]=='Cat')
-    {
+function collisionCats() {
+    if (matrix[y][x] == 'Cat') {
         savedCats++;
         getImagefieldCat()
     }
 }
-function collisionZombie()
-{
-    if(matrix[y][x]=='Zombie')
-    {
+function collisionZombie() {
+    if (matrix[y][x] == 'Zombie') {
         life--;
         getImagefieldZombie();
     }
 }
 function drawTable() {
+    if (life < 1) {
+        Reset();
+    }
     getImagefield();
     let table = "";
     table += "<table>"
@@ -76,38 +72,33 @@ function drawTable() {
             let getObject = arr[rndInt]
             if (i == 4 && j == 0 && drawcount == 0) {
                 getObject = 'X'
-                
+
             }
-            if(i==3 && j==3 && drawcount == 0)
-            {
-                getObject='Zombie'
+            if (i == 3 && j == 3 && drawcount == 0) {
+                getObject = 'Zombie'
             }
             if (drawcount == 0) {
                 table += "<td>" + getObject + "</td>"
                 matrix[i][j] = getObject
-                
+
             }
-    
+
             if (drawcount >= 1) {
-               
+
                 matrix[y][x] = 'X'
-                if(drawXvalue==1)
-                {
-                    matrix[y][x+1]='O'
+                if (drawXvalue == 1) {
+                    matrix[y][x + 1] = 'O'
                 }
-                if(drawXvalue==2)
-                {
-                    matrix[y][x-1]='O'
+                if (drawXvalue == 2) {
+                    matrix[y][x - 1] = 'O'
                 }
-                if(drawXvalue==3)
-                {
-                    matrix[y-1][x]='O'
+                if (drawXvalue == 3) {
+                    matrix[y - 1][x] = 'O'
                 }
-                if(drawXvalue==4)
-                {
-                    matrix[y+1][x]='O'
+                if (drawXvalue == 4) {
+                    matrix[y + 1][x] = 'O'
                 }
-                let drawout = matrix[i][j]          
+                let drawout = matrix[i][j]
                 table += "<td>" + drawout + "</td>"
             }
         }
@@ -120,20 +111,18 @@ function drawTable() {
     console.table(matrix)
     console.log("Value of x: " + x)
     console.log("Value of y: " + y)
-    console.log("Saved cats: "+savedCats)
-    console.log("Life remaning: "+life)
+    console.log("Saved cats: " + savedCats)
+    console.log("Life remaning: " + life)
     displayLife();
     displaySavedCats();
-    
+
 }
-function displayLife()
-{
-    document.getElementById("health").innerHTML="Remaning life:"+life
+function displayLife() {
+    document.getElementById("health").innerHTML = "Remaning life:" + life
 }
 
-function displaySavedCats()
-{
-    document.getElementById("cats").innerHTML="Saved cats: "+ savedCats
+function displaySavedCats() {
+    document.getElementById("cats").innerHTML = "Saved cats: " + savedCats
 }
 
 function arrayRandom(min, max) {
@@ -141,10 +130,9 @@ function arrayRandom(min, max) {
 }
 
 function West() {
-    if (x > 0)
-    {
+    if (x > 0) {
         x--
-        drawXvalue=1;
+        drawXvalue = 1;
     }
     console.log(x)
     zombieMovment()
@@ -157,7 +145,7 @@ function East() {
     else {
 
         x++
-        drawXvalue=2;
+        drawXvalue = 2;
     }
     console.log(x)
     zombieMovment()
@@ -169,7 +157,7 @@ function North() {
     }
     else {
         y++
-        drawXvalue=3;
+        drawXvalue = 3;
 
     }
     console.log(y)
@@ -182,14 +170,14 @@ function South() {
     }
     else {
         y--
-        drawXvalue=4;
+        drawXvalue = 4;
     }
     console.log(y)
     zombieMovment()
     drawTable()
 }
 function getButtonsEast() {
-    let post = document.getElementById("buttons")
+    let post = document.getElementById("west")
     post.innerHTML = ""
 
     let buttonWest = document.createElement("button")
@@ -223,47 +211,49 @@ function getButtonsSouth() {
 }
 const rndInt = arrayRandom(1, 5)
 
-function zombieMovment ()
-{
-   // const rndMove=arrayRandom(1,30)
-   const rndMove=arrayRandom(1,4)
-    console.log("Value for movment zombie: "+rndMove)
-    if(rndMove==1)
-    {
-        if(zombieX<4)
-        {
+function zombieMovment() {
+    // const rndMove=arrayRandom(1,30)
+    const rndMove = arrayRandom(1, 4)
+    console.log("Value for movment zombie: " + rndMove)
+    if (rndMove == 1) {
+        if (zombieX < 4) {
             zombieX++;
-            matrix[zombieX][zombieY]='Zombie'
-            matrix[zombieX-1][zombieY]='O'
-        }    
+            matrix[zombieX][zombieY] = 'Zombie'
+            matrix[zombieX - 1][zombieY] = 'O'
+        }
     }
-    if(rndMove==2)
-    {
-        if(zombieX > 0)
-        {
+    if (rndMove == 2) {
+        if (zombieX > 0) {
             zombieX--;
-            matrix[zombieX][zombieY]='Zombie'
-            matrix[zombieX+1][zombieY]='O'
-        }    
+            matrix[zombieX][zombieY] = 'Zombie'
+            matrix[zombieX + 1][zombieY] = 'O'
+        }
     }
-    if(rndMove==3)
-    {
-        if(zombieY>0)
-        {
+    if (rndMove == 3) {
+        if (zombieY > 0) {
             zombieY--;
-            matrix[zombieX][zombieY]='Zombie'
-            matrix[zombieX][zombieY+1]='O'
-        }     
+            matrix[zombieX][zombieY] = 'Zombie'
+            matrix[zombieX][zombieY + 1] = 'O'
+        }
     }
-    if(rndMove==4)
-    {
-        if(zombieX<4)
-        {
-            zombieX++;
-            matrix[zombieX][zombieY]='Zombie'
-            matrix[zombieX-1][zombieY]='O'
-        }  
-    }   
+    if (rndMove == 4) {
+        if (zombieY < 4) {
+            zombieY++;
+            matrix[zombieX][zombieY] = 'Zombie'
+            matrix[zombieX][zombieY - 1] = 'O'
+        }
+    }
+}
+
+function Reset() {
+    x = 0;
+    y = 4;
+    drawcount = 0;
+    life = 1;
+    savedCats = 0;
+    drawXvalue = 0;
+    zombieX = 3;
+    zombieY = 3;
 }
 
 

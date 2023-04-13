@@ -1,0 +1,30 @@
+body
+{
+    background-image: url("../images/skog.jpg");
+    background-size: cover;
+}
+p
+{
+    text-align: center;
+    font-size: 40px;
+    padding-top: 300px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 
+    'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+li
+{
+    display: inline-block;
+}
+a
+{
+    text-decoration: none;
+    padding-left: 50px;
+    color: black;
+    font-size: 30px;
+    
+}
+.low
+{
+    padding-top: 450px;
+
+}
