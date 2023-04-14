@@ -12,6 +12,7 @@ let drawXvalue = 0;
 let remaningCats= 0;
 const arr = ["O", "O", "Cat", "O", "Cat", "O", "O"];
 
+
 drawTable();
 getButtonsWest();
 getButtonsEast();
@@ -19,8 +20,8 @@ getButtonsNorth();
 getButtonsSouth();
 displayLife();
 displaySavedCats();
-getImagefield();
-
+// getImagefield();
+SetBackground();
 function getImagefield() {
     let catpic = ""
     catpic = "images/natur.jpg"
@@ -63,6 +64,7 @@ function collisionZombie() {
     }
 }
 function drawTable() {
+    SetBackground();
     if (life < 1) {
         Reset();
     }
@@ -70,7 +72,7 @@ function drawTable() {
     {
         Reset();
     }
-    getImagefield();
+    // getImagefield();
     let table = "";
     table += "<table>"
     let arrayLength = arr.length;
@@ -279,5 +281,188 @@ function CountCats()
     {
         getImagefieldChuck();
     }
+}
+
+function SetBackground()
+{
+    if(x==0 && y==0)
+    {
+        let catpic = ""
+        catpic = "images/skog2.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Du är framme vid en äng "
+    }
+    if(x==1 && y==0)
+    {
+        let catpic = ""
+        catpic = "images/skog3.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Du ser ett par fjärliar "
+    }
+    if(x==2 && y==0)
+    {
+        let catpic = ""
+        catpic = "images/skog4.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Du går på en stig i dagsljuset"
+    }
+    if(x==3 && y==0)
+    {
+        let catpic = ""
+        catpic = "images/skog5.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Solen tittar fram bland träden"
+    }
+    if(x==4 && y==0)
+    {
+        let catpic = ""
+        catpic = "images/skog6.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Dimman kommer in över skogen"
+    }
+    if(x==0 && y==1)
+    {
+        let catpic = ""
+        catpic = "images/skog8.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Solen lyser in mellan träden"
+    }
+    if(x==1 && y==1)
+    {
+        let catpic = ""
+        catpic = "images/skog9.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Du går mellan träden"
+    }
+    if(x==2 && y==1)
+    {
+        let catpic = ""
+        catpic = "images/skog10.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Här verkar det finnas en väg"
+    }
+    if(x==3 && y==1)
+    {
+        let catpic = ""
+        catpic = "images/skog11.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Träden skymmer solen"
+    }
+    if(x==4 && y==1)
+    {
+        let catpic = ""
+        catpic = "images/skog12.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Målnen drar in vid sjön"
+    }
+    if(x==0 && y==2)
+    {
+        let catpic = ""
+        catpic = "images/skog13.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Du hittar en stuga vid sjön"
+    }
+    if(x==1 && y==2)
+    {
+        let catpic = ""
+        catpic = "images/skog14.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Solen lyser vid vattnet"
+    }
+    if(x==2 && y==2)
+    {
+        let catpic = ""
+        catpic = "images/skog15.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Solen lyser in mellan träden"
+    }
+    if(x==3 && y==2)
+    {
+        let catpic = ""
+        catpic = "images/skog16.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Du har kommit fram till en mer öppen yta"
+    }
+    if(x==4 && y==2)
+    {
+        let catpic = ""
+        catpic = "images/skog17.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Det börjar bli mörkare ute"
+    }
+    if(x==0 && y==3)
+    {
+        let catpic = ""
+        catpic = "images/skog18.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="En stuga som ligger en bit upp"
+    }
+    if(x==1 && y==3)
+    {
+        let catpic = ""
+        catpic = "images/skog19.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Solen lyser in bland träden"
+    }
+    if(x==2 && y==3)
+    {
+        let catpic = ""
+        catpic = "images/skog20.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Vattnet forsar ner"
+    }
+    if(x==3 && y==3)
+    {
+        let catpic = ""
+        catpic = "images/skog21.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Dimman drar in"
+    }
+    if(x==4 && y==3)
+    {
+        let catpic = ""
+        catpic = "images/skog22.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Det är en klar himmel"
+    }
+    if(x==0 && y==4)
+    {
+        let catpic = ""
+        catpic = "images/skog23.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Du får vara försiktig med åskan"
+    }
+    if(x==1 && y==4)
+    {
+        let catpic = ""
+        catpic = "images/skog24.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Solen lyser vid vattnet"
+    }
+    if(x==2 && y==4)
+    {
+        let catpic = ""
+        catpic = "images/skog25.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Du är nära en bergkant"
+    }
+    if(x==3 && y==4)
+    {
+        let catpic = ""
+        catpic = "images/skog26.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Solen går upp vid en brygga"
+    }
+    if(x==4 && y==4)
+    {
+        let catpic = ""
+        catpic = "images/skog27.jpg"
+        document.getElementById("catimg").src = catpic
+        document.getElementById("imgline").innerHTML="Du ser en svan"
+    }
+    
+
+  
+    
 }
 
