@@ -283,104 +283,104 @@ function CountCats() {
 
 function SetBackground() {
     if (x == 0 && y == 0) {
-        changeimg("url(../images/skog2.jpg)");
+        changeimg("url(images/skog2.jpg)");
         document.getElementById("imgline").innerHTML = "Du är framme vid en äng "
     }
     if (x == 1 && y == 0) {
-        changeimg("url(../images/skog3.jpg)");
+        changeimg("url(images/skog3.jpg)");
         document.getElementById("imgline").innerHTML = "Du ser ett par fjärliar "
     }
     if (x == 2 && y == 0) {
-        changeimg("url(../images/skog4.jpg)");
+        changeimg("url(images/skog4.jpg)");
         document.getElementById("imgline").innerHTML = "Du går på en stig i dagsljuset"
     }
     if (x == 3 && y == 0) {
-        changeimg("url(../images/skog5.jpg)");
+        changeimg("url(images/skog5.jpg)");
         document.getElementById("imgline").innerHTML = "Solen tittar fram bland träden"
     }
     if (x == 4 && y == 0) {
-        changeimg("url(../images/skog6.jpg)");
+        changeimg("url(images/skog6.jpg)");
         document.getElementById("imgline").innerHTML = "Dimman kommer in över skogen"
     }
     if (x == 0 && y == 1) {
-        changeimg("url(../images/skog8.jpg)");
+        changeimg("url(images/skog8.jpg)");
         document.getElementById("imgline").innerHTML = "Solen lyser in mellan träden"
     }
     if (x == 1 && y == 1) {
-        changeimg("url(../images/skog9.jpg)");
+        changeimg("url(images/skog9.jpg)");
         document.getElementById("imgline").innerHTML = "Du går mellan träden"
     }
     if (x == 2 && y == 1) {
-        changeimg("url(../images/skog10.jpg)");
+        changeimg("url(images/skog10.jpg)");
         document.getElementById("imgline").innerHTML = "Här verkar det finnas en väg"
     }
     if (x == 3 && y == 1) {
-        changeimg("url(../images/skog11.jpg)");
+        changeimg("url(images/skog11.jpg)");
         document.getElementById("imgline").innerHTML = "Träden skymmer solen"
     }
     if (x == 4 && y == 1) {
-        changeimg("url(../images/skog12.jpg)");
+        changeimg("url(images/skog12.jpg)");
         document.getElementById("imgline").innerHTML = "Målnen drar in vid sjön"
     }
     if (x == 0 && y == 2) {
-        changeimg("url(../images/skog13.jpg)");
+        changeimg("url(images/skog13.jpg)");
         document.getElementById("imgline").innerHTML = "Du hittar en stuga vid sjön"
     }
     if (x == 1 && y == 2) {
-        changeimg("url(../images/skog14.jpg)");
+        changeimg("url(images/skog14.jpg)");
         document.getElementById("imgline").innerHTML = "Solen lyser vid vattnet"
     }
     if (x == 2 && y == 2) {
-        changeimg("url(../images/skog15.jpg)");
+        changeimg("url(images/skog15.jpg)");
         document.getElementById("imgline").innerHTML = "Solen lyser in mellan träden"
     }
     if (x == 3 && y == 2) {
-        changeimg("url(../images/skog16.jpg)");
+        changeimg("url(images/skog16.jpg)");
         document.getElementById("imgline").innerHTML = "Du har kommit fram till en mer öppen yta"
     }
     if (x == 4 && y == 2) {
-        changeimg("url(../images/skog17.jpg)");
+        changeimg("url(images/skog17.jpg)");
         document.getElementById("imgline").innerHTML = "Det börjar bli mörkare ute"
     }
     if (x == 0 && y == 3) {
-        changeimg("url(../images/skog18.jpg)");
+        changeimg("url(images/skog18.jpg)");
         document.getElementById("imgline").innerHTML = "En stuga som ligger en bit upp"
     }
     if (x == 1 && y == 3) {
-        changeimg("url(../images/skog19.jpg)");
+        changeimg("url(images/skog19.jpg)");
         document.getElementById("imgline").innerHTML = "Solen lyser in bland träden"
     }
     if (x == 2 && y == 3) {
-        changeimg("url(../images/skog20.jpg)");
+        changeimg("url(images/skog20.jpg)");
         document.getElementById("imgline").innerHTML = "Vattnet forsar ner"
     }
     if (x == 3 && y == 3) {
-        changeimg("url(../images/skog21.jpg)");
+        changeimg("url(images/skog21.jpg)");
         document.getElementById("imgline").innerHTML = "Dimman drar in"
     }
     if (x == 4 && y == 3) {
-        changeimg("url(../images/skog22.jpg)");
+        changeimg("url(images/skog22.jpg)");
         document.getElementById("imgline").innerHTML = "Det är en klar himmel"
     }
     if (x == 0 && y == 4) {
-        changeimg("url(../images/skog23.jpg)");
+        changeimg("url(images/skog23.jpg)");
         document.getElementById("imgline").innerHTML = "Du får vara försiktig med åskan"
 
     }
     if (x == 1 && y == 4) {
-        changeimg("url(../images/skog24.jpg)");
+        changeimg("url(images/skog24.jpg)");
         document.getElementById("imgline").innerHTML = "Solen lyser vid vattnet"
     }
     if (x == 2 && y == 4) {
-        changeimg("url(../images/skog25.jpg)");
+        changeimg("url(images/skog25.jpg)");
         document.getElementById("imgline").innerHTML = "Du är nära en bergkant"
     }
     if (x == 3 && y == 4) {
-        changeimg("url(../images/skog26.jpg)");
+        changeimg("url(images/skog26.jpg)");
         document.getElementById("imgline").innerHTML = "Solen går upp vid en brygga"
     }
     if (x == 4 && y == 4) {
-        changeimg("url(../images/skog27.jpg)");
+        changeimg("url(images/skog27.jpg)");
         document.getElementById("imgline").innerHTML = "Du ser en svan"
     }
 
