@@ -79,10 +79,10 @@ function drawTable() {
     let table = "";
     table += "<table>"
     let arrayLength = arr.length;
+    SetBackground();
     collisionCats();
     collisionZombie();
     noCollison();
-    SetBackground();
 
     for (let i = 0; i < row; i++) {
         for (let j = 0; j < collum; j++) {
