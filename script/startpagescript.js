@@ -9,6 +9,7 @@ let savedCats = 0;
 let zombieX = 3;
 let zombieY = 3;
 let drawXvalue = 0;
+let remaningCats= 0;
 const arr = ["O", "O", "Cat", "O", "Cat", "O", "O"];
 
 drawTable();
@@ -41,6 +42,13 @@ function getImagefieldZombie() {
     document.getElementById("imgline").innerHTML = "Aj då zombin fångade dig vid ruta: " + y + "," + x
 
 }
+function getImagefieldChuck()
+{
+    let catpic=""
+    catpic="images/chuck.jpg"
+    document.getElementById("catimg").src = catpic
+    document.getElementById("imgline").innerHTML = "Inga katter kvar på spelplanen gå vidare eller kör igen!"
+}
 
 function collisionCats() {
     if (matrix[y][x] == 'Cat') {
@@ -56,6 +64,10 @@ function collisionZombie() {
 }
 function drawTable() {
     if (life < 1) {
+        Reset();
+    }
+    if(remaningCats<1)
+    {
         Reset();
     }
     getImagefield();
@@ -115,6 +127,7 @@ function drawTable() {
     console.log("Life remaning: " + life)
     displayLife();
     displaySavedCats();
+    CountCats();
 
 }
 function displayLife() {
@@ -247,4 +260,24 @@ function Reset()
     zombieY = 3;
 }
 
+function CountCats()
+{
+    let number=0;
+    for(let i=0; i<row; i++)
+    {
+        for(let j=0; j<collum; j++)
+        {
+            if(matrix[i][j]=='Cat')
+            {
+                number++;
+            }
+        }
+    }
+    console.log("Rem cats: "+number)
+    remaningCats=number;
+    if(remaningCats<1)
+    {
+        getImagefieldChuck();
+    }
+}
 
