@@ -10,6 +10,7 @@ p
     padding-top: 300px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 
     'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
 }
 li
 {
@@ -19,7 +20,7 @@ a
 {
     text-decoration: none;
     padding-left: 50px;
-    color: black;
+    color: white;
     font-size: 30px;
     
 }
