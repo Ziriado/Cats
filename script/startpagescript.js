@@ -139,11 +139,7 @@ function West() {
     drawTable()
 }
 function East() {
-    if (x == 4) {
-        x
-    }
-    else {
-
+    if (x < 4) {
         x++
         drawXvalue = 2;
     }
@@ -151,24 +147,19 @@ function East() {
     zombieMovment()
     drawTable()
 }
-function North() {
-    if (y == 4) {
-        y
-    }
-    else {
+function South() {
+    if (y < 4) {
         y++
         drawXvalue = 3;
-
     }
+
     console.log(y)
     zombieMovment()
     drawTable()
 }
-function South() {
-    if (y == 0) {
-        y;
-    }
-    else {
+function North() {
+    if (y > 0)
+     {
         y--
         drawXvalue = 4;
     }
@@ -176,7 +167,7 @@ function South() {
     zombieMovment()
     drawTable()
 }
-function getButtonsEast() {
+function getButtonsWest() {
     let post = document.getElementById("west")
     post.innerHTML = ""
 
@@ -184,35 +175,34 @@ function getButtonsEast() {
     buttonWest.innerHTML = "<button onclick='West()'>West</button> "
     post.appendChild(buttonWest)
 }
-function getButtonsWest() {
+function getButtonsEast() {
     let post = document.getElementById("east")
     post.innerHTML = ""
 
-    let buttonWest = document.createElement("button")
-    buttonWest.innerHTML = "<button onclick='East()'>East</button> "
-    post.appendChild(buttonWest)
+    let buttonEast = document.createElement("button")
+    buttonEast.innerHTML = "<button onclick='East()'>East</button> "
+    post.appendChild(buttonEast)
 }
 
-function getButtonsNorth() {
-    let post = document.getElementById("north")
-    post.innerHTML = ""
-
-    let buttonNorth = document.createElement("button")
-    buttonNorth.innerHTML = "<button onclick='North()'>South</button> "
-    post.appendChild(buttonNorth)
-}
 function getButtonsSouth() {
     let post = document.getElementById("south")
     post.innerHTML = ""
 
     let buttonSouth = document.createElement("button")
-    buttonSouth.innerHTML = "<button onclick='South()'>North</button> "
+    buttonSouth.innerHTML = "<button onclick='South()'>South</button> "
     post.appendChild(buttonSouth)
+}
+function getButtonsNorth() {
+    let post = document.getElementById("north")
+    post.innerHTML = ""
+
+    let buttonNorth = document.createElement("button")
+    buttonNorth.innerHTML = "<button onclick='North()'>North</button> "
+    post.appendChild(buttonNorth)
 }
 const rndInt = arrayRandom(1, 5)
 
 function zombieMovment() {
-    // const rndMove=arrayRandom(1,30)
     const rndMove = arrayRandom(1, 4)
     console.log("Value for movment zombie: " + rndMove)
     if (rndMove == 1) {
@@ -245,7 +235,8 @@ function zombieMovment() {
     }
 }
 
-function Reset() {
+function Reset() 
+{
     x = 0;
     y = 4;
     drawcount = 0;
