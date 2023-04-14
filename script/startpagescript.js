@@ -22,21 +22,21 @@ getImagefield();
 
 function getImagefield() {
     let catpic = ""
-    catpic = "../images/natur.jpg"
+    catpic = "images/natur.jpg"
     document.getElementById("catimg").src = catpic
     document.getElementById("imgline").innerHTML = "Du är vid vattenfallet på ruta: " + y + "," + x
 }
 
 function getImagefieldCat() {
     let catpic = ""
-    catpic = "../images/cat.jpg"
+    catpic = "images/cat.jpg"
     document.getElementById("catimg").src = catpic
     document.getElementById("imgline").innerHTML = "Du träffade på en katt vid ruta: " + y + "," + x
 
 }
 function getImagefieldZombie() {
     let catpic = ""
-    catpic = "../images/zombie.png"
+    catpic = "images/zombie.png"
     document.getElementById("catimg").src = catpic
     document.getElementById("imgline").innerHTML = "Aj då zombin fångade dig vid ruta: " + y + "," + x
 
