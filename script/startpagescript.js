@@ -390,6 +390,7 @@ function SetBackground() {
     if(x > 4 || y > 4)
     {
         changeimg("url(images/skog.jpg)");
+        changeColor("red")
         document.getElementById("imgline").innerHTML = "Default bild"
     }
 
