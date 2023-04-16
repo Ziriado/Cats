@@ -1,6 +1,6 @@
-var matrix = Array(5).fill(null).map(() => Array(5).fill(0));
 let row = 5;
 let collum = 5;
+var matrix = Array(row).fill(null).map(() => Array(collum).fill(0));
 let x = 0;
 let y = 4;
 let drawcount = 0;
@@ -159,7 +159,7 @@ function West() {
     drawTable()
 }
 function East() {
-    if (x < 4) {
+    if (x < collum-1) {
         x++
         drawXvalue = 2;
     }
@@ -168,7 +168,7 @@ function East() {
     drawTable()
 }
 function South() {
-    if (y < 4) {
+    if (y < row-1) {
         y++
         drawXvalue = 3;
     }
@@ -225,7 +225,7 @@ function zombieMovment() {
     const rndMove = arrayRandom(1, 4)
     console.log("Value for movment zombie: " + rndMove)
     if (rndMove == 1) {
-        if (zombieX < 4) {
+        if (zombieX < row-1) {
             zombieX++;
             matrix[zombieX][zombieY] = 'Zombie'
             matrix[zombieX - 1][zombieY] = 'O'
@@ -246,7 +246,7 @@ function zombieMovment() {
         }
     }
     if (rndMove == 4) {
-        if (zombieY < 4) {
+        if (zombieY < collum-1) {
             zombieY++;
             matrix[zombieX][zombieY] = 'Zombie'
             matrix[zombieX][zombieY - 1] = 'O'
@@ -382,6 +382,11 @@ function SetBackground() {
     if (x == 4 && y == 4) {
         changeimg("url(images/skog27.jpg)");
         document.getElementById("imgline").innerHTML = "Du ser en svan"
+    }
+    if(x > 4 || y > 4)
+    {
+        changeimg("url(images/skog.jpg)");
+        document.getElementById("imgline").innerHTML = "Default bild"
     }
 
 
