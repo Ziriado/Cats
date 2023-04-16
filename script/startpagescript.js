@@ -79,6 +79,7 @@ function drawTable() {
     let table = "";
     table += "<table>"
     let arrayLength = arr.length;
+    changeColor("white")
     SetBackground();
     collisionCats();
     collisionZombie();
@@ -296,6 +297,7 @@ function SetBackground() {
     }
     if (x == 3 && y == 0) {
         changeimg("url(images/skog5.jpg)");
+        changeColor("red")
         document.getElementById("imgline").innerHTML = "Solen tittar fram bland träden"
     }
     if (x == 4 && y == 0) {
@@ -320,6 +322,7 @@ function SetBackground() {
     }
     if (x == 4 && y == 1) {
         changeimg("url(images/skog12.jpg)");
+        changeColor("red")
         document.getElementById("imgline").innerHTML = "Målnen drar in vid sjön"
     }
     if (x == 0 && y == 2) {
@@ -381,6 +384,7 @@ function SetBackground() {
     }
     if (x == 4 && y == 4) {
         changeimg("url(images/skog27.jpg)");
+        changeColor("red")
         document.getElementById("imgline").innerHTML = "Du ser en svan"
     }
     if(x > 4 || y > 4)
@@ -395,4 +399,8 @@ function SetBackground() {
 }
 function changeimg(filePath) {
     document.body.style.backgroundImage = filePath
+}
+function changeColor(color)
+{
+    document.getElementById("imgline").style.color=color
 }
